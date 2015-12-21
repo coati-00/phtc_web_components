@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>PHTC | Lower New York State Public Health Training Center</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="phtc">
+  <meta name="author" content="CCNMTL">
+
+  <link href="../bootstrap/css/bootstrap.css" rel="stylesheet">
+  <link href="../bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+  <link href="../css/main.css?site=phtc" rel="stylesheet">
+  <script src="../js/jquery-1.7.2.min.js"></script>
+
+</head>
+<body>
+
+<div class="container">
+<script>
+/* Attempt at creating custom HTML element */
+
+//register the element
+var LogicModel = document.registerElement('logic-model-container');
+document.body.appendChild(new LogicModel());
+
+</script>
+
+
+<div class="logic-model-container">
+	<div id="phase_container">
+
+		<div>
+			<div class="logic-model-game-phase-name">Name of this phase of the game.</div>
+			{% comment %}<div class="game-phase-help-button-div">
+				<i class="game-phase-help-button icon-large icon-question-sign"></i>
+	    	</div>
+	    	{% endcomment %}
+		</div>
+
+		<!-- choose scenario -->
+		{%include "logic_model/subtemplates/initial_scenario_choice.html" %}
+
+		
+		<!-- all subsequent phases of the game -->
+		{%include "logic_model/subtemplates/table.html" %}
+		<!-- the help box -->
+		{%include "logic_model/subtemplates/help_box.html" %}
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript">
+    jQuery(document).ready(function(jQuery){
+        jQuery(".scenario-header").click(function(){
+            jQuery(this).next(".scenario-content").slideToggle("fast");
+            jQuery(this).toggleClass("active");
+        });
+    });
+</script>
+
+
+
+
+
+
+</div><!-- container -->
+
+
+<script src="../bootstrap/js/bootstrap.js"></script>
+
+
+<script>
+//add tooltip
+/*
+jQuery("span.user_profile").tooltip({
+    placement: 'bottom'
+  });
+  jQuery("span.tooltip-bottom").tooltip({
+    placement: 'bottom'
+  });
+  jQuery("span.tooltip-top").tooltip({
+    placement: 'top'
+  });
+ 
+// Create a PHTC namespace
+// and give it a getURL function
+  PHTC = {};
+  PHTC.getUrlVars = function() {
+    var vars = {};
+    var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+      vars[key] = value;
+    });
+    return vars;
+  }//end getUrlVars
+
+if(window.phtcInputFormCheck){
+  PHTC.formInputLength();
+}
+  
+  window.PHTC = PHTC;
+  */
+</script>
+
+</body>
+</html>

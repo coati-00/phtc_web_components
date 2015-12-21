@@ -1,0 +1,30 @@
+<div class="logic-model-container">
+	<div id="phase_container">
+
+		<div>
+			<div class="logic-model-game-phase-name">Name of this phase of the game.</div>
+			{% comment %}<div class="game-phase-help-button-div">
+				<i class="game-phase-help-button icon-large icon-question-sign"></i>
+	    	</div>
+	    	{% endcomment %}
+		</div>
+
+		<!-- choose scenario -->
+		{%include "logic_model/subtemplates/initial_scenario_choice.html" %}
+
+		
+		<!-- all subsequent phases of the game -->
+		{%include "logic_model/subtemplates/table.html" %}
+		<!-- the help box -->
+		{%include "logic_model/subtemplates/help_box.html" %}
+	</div>
+</div>
+
+<script type="text/javascript" language="javascript">
+    jQuery(document).ready(function(jQuery){
+        jQuery(".scenario-header").click(function(){
+            jQuery(this).next(".scenario-content").slideToggle("fast");
+            jQuery(this).toggleClass("active");
+        });
+    });
+</script>

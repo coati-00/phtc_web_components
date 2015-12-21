@@ -1,0 +1,76 @@
+
+.checkbox-wrapper table{
+  border: none !important;
+  margin: 14px 0 50px 0;
+}
+.checkbox-wrapper table td{
+	border: 1px solid #333;
+	/*background: #e2e2e2;*/
+	min-width: 65px;
+	max-width: 101px;
+	height: 60px;
+	padding: 0 10px;
+  color: #333;
+}
+.column-header{
+	height: 25px;
+}
+.column-spacer{
+  border: none !important;
+  background: none !important;
+}
+.interactive{
+	cursor: pointer;
+  background:#FFF!important;
+}
+.user-x{
+  color: #08C !important;
+  font-weight: bold;
+  padding: 0 0 0 0px !important;
+  font-size: 24px;
+}
+.answr-x{
+  margin: -3px 0 0 0;
+  color: #333 !important;
+  font-weight: bold;
+  padding: 0 0 0 15px !important;
+  font-size: 24px;
+  float: right;
+}
+#row-title{
+  float: left;
+  margin: 170px 0 0 0;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 0 10px;
+  color:#C63;
+}
+#column-title{
+  color:#C63;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+.answer-key-wrapper{
+    position: absolute;
+    margin: -35px 0 0 239px;
+    clear: both;
+    padding: 4px;
+    border: 1px solid #999;
+}
+.user-answers{
+  float: left;
+  line-height: 20px;
+}
+.activity-answers{
+  float: right;
+  padding: 0 0 0 40px;
+  line-height: 20px;
+  margin: 3px 0 0 0
+}
+.clear-button{
+  margin: 0 30px;
+}
+.submit-button{
+  margin:0 30px;
+}
